@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+      http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+      http://www.springframework.org/schema/context 
+      http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+      
+  <bean id="emp" class="com.cg.iter.bean.Employee">
+  
+ <!--  parameterized constructor -->
+  <constructor-arg name="employeeId" value="14" />
+  <constructor-arg name="employeeName" value="Ashmita" />
+  <constructor-arg name="salary" value="123456789" />
+  <constructor-arg name="age" value="22" />
+  <constructor-arg name="businessUnit" ref="sbu" />
+  
+  
+  </bean>
+    <bean id="sbu" class="com.cg.iter.bean.SBU">
+  <property name="sbuId" value="78" />
+  <property name="sbuName" value="finance BU" />
+  <property name="sbuHead" value="John R" />
+  </bean>
+
+      </beans>

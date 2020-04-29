@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans.xsd 
+http://www.springframework.org/schema/context 
+http://www.springframework.org/schema/context/spring-context-4.3.xsd"
+ xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns="http://www.springframework.org/schema/beans">
+
+<bean class="com.cg.iter.dao.EmployeeDaoImpl" id="emp">
+<property name="emplist">
+<list>
+
+<bean class="com.cg.iter.bean.Employee">
+<property name="employeeId" value="111" />
+<property name="employeeName" value="Ashmita" />
+<property name="salary" value="50000" />
+</bean>
+
+<bean class="com.cg.iter.bean.Employee">
+<property name="employeeId" value="112" />
+<property name="employeeName" value="Amrita" />
+<property name="salary" value="60000" />
+</bean>
+
+</list>
+</property>
+</bean>
+
+</beans>
